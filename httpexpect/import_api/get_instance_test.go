@@ -6,7 +6,14 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"net/http"
 	"testing"
+	"os"
 )
+
+func TestMain(m *testing.M) {
+
+	config.Init()
+	os.Exit(m.Run())
+}
 
 func TestGetInstance(t *testing.T) {
 
